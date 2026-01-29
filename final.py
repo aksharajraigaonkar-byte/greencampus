@@ -31,7 +31,7 @@ if captured_image:
         with st.spinner("Analyzing waste using AI..."):
             response = client.models.generate_content(
                 model="gemini-2.5-flash",
-                contents=["Tell me in which bin should this waste be discarded in one sentence red/green/blue:{labels[class_index]} also add bin colour emoji and also give a 20 word environmental impact fact about the item", image]
+                contents=["Tell me in which bin should this waste be discarded in one sentence red/green/blue:{labels[class_index]} also add bin colour emoji", image]
             )
         st.success("✅ Waste analysis completed successfully!")
         st.write("### 🧾 AI Suggestion:")
